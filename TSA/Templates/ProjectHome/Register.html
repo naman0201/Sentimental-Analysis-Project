@@ -1,0 +1,36 @@
+
+{% extends 'ProjectHome\navbar.html' %}
+{% block bodycont %}
+<div class="container mt-4">
+  <form method="POST" >
+    {% csrf_token %}
+    <div class="mb-3 row">
+        <label for="usrname" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control-plaintext" id="usrname" value="Abc Xyz" name="usrname">
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com" name="Email">
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPassword" name="Password1">
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="ConfirmPassword" class="col-sm-2 col-form-label">Confirm Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="ConfirmPassword" name="Password2">
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <button type="submit" class="btn btn-outline-success">Sign un</button>
+    </div>
+    </form>
+  </div>
+{% endblock %}
